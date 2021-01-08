@@ -42,7 +42,7 @@ namespace CRUDoperations
         public gettestdata GetInfo()
         {
             gettestdata g = new gettestdata();
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-0QLRLVG;Initial Catalog=CrudDB;Persist Security Info=True;User ID=sa; Password=albana123");
+            SqlConnection con = new SqlConnection("Data Source=LAPTOP-5QOEH7MN;Initial Catalog=WCF;Persist Security Info=True;User ID=sa; Password=iDhanzaghnia99");
             con.Open();
             SqlCommand cmd = new SqlCommand("Select * from dbo.UserTab", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -55,7 +55,7 @@ namespace CRUDoperations
         public string Update(UpdateUser u)
         {
             string Message = "";
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-0QLRLVG;Initial Catalog=CrudDB;Persist Security Info=True;User ID=sa; Password=albana123");
+            SqlConnection con = new SqlConnection("Data Source=LAPTOP-5QOEH7MN;Initial Catalog=WCF;Persist Security Info=True;User ID=sa; Password=iDhanzaghnia99");
             con.Open();
             SqlCommand cmd = new SqlCommand("Update dbo.UserTab set Name = @Name, Email = @Email where UserId= @UserId", con);
             cmd.Parameters.AddWithValue("@UserId", u.UID);
@@ -76,7 +76,7 @@ namespace CRUDoperations
         public string Delete(DeleteUser d)
         {
             string msg = "";
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-0QLRLVG;Initial Catalog=CrudDB;Persist Security Info=True;User ID=sa; Password=albana123");
+            SqlConnection con = new SqlConnection("Data Source=LAPTOP-5QOEH7MN;Initial Catalog=WCF;Persist Security Info=True;User ID=sa; Password=iDhanzaghnia99");
             con.Open();
             SqlCommand cmd = new SqlCommand("delete dbo.UserTab where UserId = @UserId", con);
             cmd.Parameters.AddWithValue("@UserId", d.UID);
